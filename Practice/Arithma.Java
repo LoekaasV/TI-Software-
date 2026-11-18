@@ -17,13 +17,12 @@ class Arithmetic{
     }
 }
 
-public class staticP (){
 
-    public static void main(String[] args){
+public class Arithma {
+    
+   public static void main(String[] args){
         Arithmetic.calc(1, "+", 2);
         Arithmetic.calc(4, "-", 3);
         Arithmetic.calc(5, "*", 6);
     }
-
-
 }
