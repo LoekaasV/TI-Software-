@@ -1,19 +1,16 @@
 import java.util.Scanner;
 
 class Cypher {
+    static Scanner input = new Scanner(System.in);
     static Character[] alphabet = {'a','b', 'c', 'd', 'e', 'f', 
                                 'g', 'h', 'i', 'j', 'k', 'l', 
                                 'm', 'n', 'o', 'p', 'q', 'r', 
                                 's', 't', 'u', 'v', 'w', 'x', 
                                 'y', 'z'};
     static void encode(){
-        
-        Scanner input = new Scanner(System.in);
-        
         System.out.println("Enter Text: ");
         String textP = input.nextLine();
         
-
         Character[] chars = new Character[textP.length()];
         for (int i = 0; i < textP.length(); i++) {
             chars[i] = Character.toLowerCase(textP.charAt(i));
@@ -43,9 +40,6 @@ class Cypher {
     }
 
     static void decode(){
-        
-        Scanner input = new Scanner(System.in);
-        
         System.out.println("Enter Text: ");
         String textP = input.nextLine();
         
@@ -87,15 +81,13 @@ public class CaesarCyp {
     public static void main(String[] args) {
         boolean running = true;
 
-        Scanner scanner = new Scanner(System.in);
-
         while(running){
             System.out.println("Do you want to Encode a message or Decode a message?");
             System.out.println("1. Encode");
             System.out.println("2. Decode");
             System.out.println("3. Quit");
 
-            int inputN = scanner.nextInt();
+            int inputN = Cypher.input.nextInt();
 
             switch(inputN){
                 case 1:
